@@ -10,3 +10,6 @@ Green spaced theme roll-a-ball-game.
 
 # Additional assets:
 Space Skybox: https://assetstore.unity.com/packages/2d/textures-materials/deep-space-skybox-pack-11056#description
+
+# Notes:
+Levels are in the scene folder.
