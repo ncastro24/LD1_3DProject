@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public GameSceneManager gamescenemanager;
     public enum GameStates
     {
         GamePlaying,
@@ -27,20 +28,23 @@ public class GameController : MonoBehaviour
     {
         gameState = GameStates.GameWon;
         // Set the text value of our result text
-        gameView.resultText.text = "You Win!";
+        //gameView.resultText.text = "You Win!";
         //Hide count and timer text
         gameView.countText.gameObject.SetActive(false);
         gameView.timerText.gameObject.SetActive(false);
+        gamescenemanager.ChangeLevel();
     }
 
     private void OnGameLost()
     {
         gameState = GameStates.GameLost;
         // Set the text value of our result text
-        gameView.resultText.text = "You Lose.";
+        //gameView.resultText.text = "You Lose.";
         //Hide count and timer text
         gameView.countText.gameObject.SetActive(false);
         gameView.timerText.gameObject.SetActive(false);
+        gamescenemanager.GameOver();
+
     }
 
     public void StateUpdate(GameStates newState)
